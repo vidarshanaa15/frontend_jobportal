@@ -11,12 +11,13 @@ const UserComponent = () => {
     const [city, setCity] = useState('')
     const [state, setState] = useState('')
     const [pcode, setPcode] = useState('')
+    const [user_type, setUser_type] = useState('')
 
     const navigator = useNavigate();
 
     const saveUser = async (e) => {
         e.preventDefault();
-        const user = { name, username, password, email, city, state, pcode };
+        const user = { name, username, password, email, city, state, pcode, user_type };
 
         try {
             const response = await createUser(user);
@@ -121,6 +122,19 @@ const UserComponent = () => {
                                 value={pcode}
                                 className='form-control'
                                 onChange={(e) => setPcode(e.target.value)}
+                            >
+                            </input>
+                        </div>
+
+                        <div className='form-group mb-3'>
+                            <label className='form-label'>User Type</label>
+                            <input
+                                type='text'
+                                placeholder='Enter user type (admin/recruiter/jobseeker)'
+                                name='user_type'
+                                value={user_type}
+                                className='form-control'
+                                onChange={(e) => setUser_type(e.target.value)}
                             >
                             </input>
                         </div>

@@ -37,6 +37,7 @@ const ListUserComponent = () => {
                         <th>City</th>
                         <th>State</th>
                         <th>Postcode</th>
+                        <th>User type</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,6 +52,7 @@ const ListUserComponent = () => {
                                 <td>{user.city}</td>
                                 <td>{user.state}</td>
                                 <td>{user.pcode}</td>
+                                <td>{user.user_type}</td>
                             </tr>
                         )
                     }
