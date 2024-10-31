@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'; // for showing a particular navbar tab as active
 
 const HeaderComponent = () => {
     return (
@@ -11,16 +12,16 @@ const HeaderComponent = () => {
                     <div className="container-fluid">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item me-lg-5">
-                                <a className="nav-link active" href="/">Home</a>
+                                <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
                             </li>
                             <li className="nav-item me-lg-5">
-                                <a className="nav-link" href="/about">About Us</a>
+                                <NavLink to="/about" className="nav-link" activeClassName="active">About Us</NavLink>
                             </li>
                             <li className="nav-item me-lg-5">
-                                <a className="nav-link" href="/search">Search Jobs</a>
+                                <NavLink to="/search" className="nav-link" activeClassName="active">Search Jobs</NavLink>
                             </li>
                             <li className="nav-item me-lg-5">
-                                <a className="nav-link" href="/contact">Contact Us</a>
+                                <NavLink to="/contact" className="nav-link" activeClassName="active">Contact Us</NavLink>
                             </li>
                         </ul>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
