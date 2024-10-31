@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { createUser } from '../services/UserService'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
-const UserComponent = () => {
-
+const SignupComponent = () => {
     const [name, setName] = useState('')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -12,7 +11,7 @@ const UserComponent = () => {
     const [state, setState] = useState('')
     const [pcode, setPcode] = useState('')
 
-    const navigator = useNavigate();
+    const navigate = useNavigate();
 
     const saveUser = async (e) => {
         e.preventDefault();
@@ -21,7 +20,7 @@ const UserComponent = () => {
         try {
             const response = await createUser(user);
             console.log(response.data);
-            navigator('/home');
+            navigate('/home');
         } catch (err) {
             console.error(err);
             setError('Failed to create user. Please try again.');
@@ -32,7 +31,7 @@ const UserComponent = () => {
         <div className='container'>
             <div className='card col-md-8 offset-md-2 my-5'>
                 <div className='card-body'>
-                    <h3 className="card-title text-center">Add new user</h3>
+                    <h3 className="card-title text-center">Sign up</h3>
                     <form>
                         <div className='form-group mb-3'>
                             <label className='form-label'>Name</label>
@@ -131,6 +130,6 @@ const UserComponent = () => {
             </div>
         </div>
     )
-}
+};
 
-export default UserComponent
+export default SignupComponent;

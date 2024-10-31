@@ -6,13 +6,13 @@ const HeaderComponent = () => {
         <div>
             <header>
                 <nav className="navbar navbar-dark bg-dark fw-bold text-center bg-black">
-                    <a className='navbar-brand mx-auto fs-3' href='/'>Job Application Portal</a>
+                    <a className='navbar-brand mx-auto fs-3' href='/home'>Job Application Portal</a>
                 </nav>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item me-lg-5">
-                                <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
+                                <NavLink exact to="/home" className="nav-link" activeClassName="active">Home</NavLink>
                             </li>
                             <li className="nav-item me-lg-5">
                                 <NavLink to="/about" className="nav-link" activeClassName="active">About Us</NavLink>
