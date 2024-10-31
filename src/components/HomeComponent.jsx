@@ -40,7 +40,7 @@ const HomeComponent = () => {
                                 <p className="card-text">
                                     Discover your next career move with our job search tool. Explore a variety of roles across industries, apply directly, and take the next step in your professional journey. Start searching now and find the opportunity that fits your skills and aspirations!
                                 </p>
-                                <a href="/about" className="btn btn-primary">Search</a>
+                                <a href="/search" className="btn btn-primary">Search</a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ const HomeComponent = () => {
                                 <p className="card-text">
                                     Ready to take the next step? Our streamlined application process makes it easy to apply for jobs that match your skills and interests. Submit your application directly to top employers and get one step closer to your dream job!
                                 </p>
-                                <a href="/about" className="btn btn-primary">Apply</a>
+                                <a href="/apply" className="btn btn-primary">Apply</a>
                             </div>
                         </div>
                     </div>
