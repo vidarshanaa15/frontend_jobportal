@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { loginUser } from '../services/AuthService'; // Adjust the path as necessary
 
 const SigninComponent = () => {
-    const [name, setUsername] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // perform authentication (api?)
-        if (name && password) {
-            // assuming successful authentication
-            alert('Signin successful!');
-            navigate('/home'); // redirect to home after successful signin
+
+        if (username && password) {
+            try {
+                const response = await loginUser({ username, password });
+                const user = response.data;
+
+                if (user) {
+                    alert('Sign-in successful!');
+                    navigate('/home');
+                }
+            } catch (error) {
+                console.error('Login failed:', error);
+                alert('Invalid credentials. Please try again.');
+            }
         } else {
             alert('Please fill in all fields');
         }
@@ -29,7 +39,7 @@ const SigninComponent = () => {
                             <input
                                 type="text"
                                 className="form-control"
-                                value={name}
+                                value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 required
                             />
