@@ -7,7 +7,6 @@ const ListJobComponent = () => {
     const [jobs, setJobs] = useState([]);
     const navigate = useNavigate();
 
-    // Fetch jobs data on component mount
     useEffect(() => {
         listJobs().then((response) => {
             setJobs(response.data);

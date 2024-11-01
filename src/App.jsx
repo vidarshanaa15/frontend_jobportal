@@ -16,6 +16,8 @@ import ListJobComponent from './components/ListJobComponent';
 import JobComponent from './components/JobComponent';
 import ViewJobComponent from './components/ViewJobComponent';
 import ApplyJobComponent from './components/ApplyJobComponent';
+import ListApplicationComponent from './components/ListApplicationComponent';
+import ApplicationComponent from './components/ApplicationComponent';
 
 const App = () => {
   const location = useLocation();
@@ -35,7 +37,9 @@ const App = () => {
         <Route path='/contact' element={<ContactComponent />} />
         <Route path='/users' element={<ListUserComponent />} />
         <Route path='/jobs' element={<ListJobComponent />} />
+        <Route path='/applications' element={<ListApplicationComponent />} />
         <Route path='/add-user' element={<UserComponent />} />
+        <Route path='/add-application' element={<ApplicationComponent />} />
         <Route path='/add-job' element={<JobComponent />} />
         <Route path='/signin' element={<SigninComponent />} />
         <Route path='/signup' element={<SignupComponent />} />

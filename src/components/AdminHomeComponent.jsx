@@ -47,6 +47,12 @@ const AdminHomeComponent = () => {
                     </button>
                     <p style={descriptionStyle}>Jobs</p>
                 </div>
+                <div style={buttonContainerStyle}>
+                    <button className="btn btn-primary" style={buttonStyle} onClick={() => navigator('/applications')}>
+                        <img src="https://i.ibb.co/dbQcZFt/2833637.png" alt="Applications" style={imageStyle} />
+                    </button>
+                    <p style={descriptionStyle}>Applications</p>
+                </div>
             </div>
         </div>
     );
