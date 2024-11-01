@@ -8,7 +8,7 @@ const WelcomeComponent = () => {
                 <div className="col-md-6 p-0">
                     <div
                         style={{
-                            height: '100vh', // Full viewport height
+                            height: '100vh',
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -19,9 +19,9 @@ const WelcomeComponent = () => {
                             src="https://media.cnn.com/api/v1/images/stellar/prod/240117205958-online-job-hunting-stock-image-restricted.jpg"
                             alt="Job Portal Image"
                             style={{
-                                height: '100%', // Fill container height
-                                width: 'auto', // Maintain aspect ratio
-                                objectFit: 'cover' // Cover the container
+                                height: '100%',
+                                width: 'auto',
+                                objectFit: 'cover'
                             }}
                         />
                     </div>
