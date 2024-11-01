@@ -4,6 +4,8 @@ import ListUserComponent from './components/ListUserComponent';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import UserComponent from './components/UserComponent';
 import HomeComponent from './components/HomeComponent';
+import AdminHomeComponent from './components/AdminHomeComponent';
+import RecruitHomeComponent from './components/RecruitHomeComponent';
 import AboutComponent from './components/AboutComponent';
 import SearchComponent from './components/SearchComponent';
 import ContactComponent from './components/ContactComponent';
@@ -23,6 +25,8 @@ const App = () => {
       {showHeader && <HeaderComponent />}
       <Routes>
         <Route path='/' element={<WelcomeComponent />} />
+        <Route path='/admin-home' element={<AdminHomeComponent />} />
+        <Route path='/recruit-home' element={<RecruitHomeComponent />} />
         <Route path='/home' element={<HomeComponent />} />
         <Route path='/about' element={<AboutComponent />} />
         <Route path='/search' element={<SearchComponent />} />

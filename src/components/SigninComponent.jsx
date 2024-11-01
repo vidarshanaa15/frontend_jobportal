@@ -14,10 +14,18 @@ const SigninComponent = () => {
             try {
                 const response = await loginUser({ username, password });
                 const user = response.data;
+                const userRole = user.user_type;
 
                 if (user) {
                     alert('Sign-in successful!');
-                    navigate('/home');
+
+                    if (userRole === 'admin') {
+                        navigate('/admin-home');
+                    } else if (userRole === 'recruiter') {
+                        navigate('/recruiter-home');
+                    } else if (userRole === 'jobseeker') {
+                        navigate('/home');
+                    }
                 }
             } catch (error) {
                 console.error('Login failed:', error);
