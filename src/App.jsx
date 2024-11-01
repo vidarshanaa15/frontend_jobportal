@@ -14,10 +14,12 @@ import SignupComponent from './components/SignupComponent';
 import WelcomeComponent from './components/WelcomeComponent';
 import ListJobComponent from './components/ListJobComponent';
 import JobComponent from './components/JobComponent';
+import ViewJobComponent from './components/ViewJobComponent';
+import ApplyJobComponent from './components/ApplyJobComponent';
 
 const App = () => {
   const location = useLocation();
-  // Hide header on welcome, signin, and signup pages
+  // hide header on welcome, signin, and signup pages
   const showHeader = !['/', '/signin', '/signup'].includes(location.pathname);
 
   return (
@@ -37,6 +39,8 @@ const App = () => {
         <Route path='/add-job' element={<JobComponent />} />
         <Route path='/signin' element={<SigninComponent />} />
         <Route path='/signup' element={<SignupComponent />} />
+        <Route path="/view-job/:jobId" element={<ViewJobComponent />} />
+        <Route path="/apply-job/:jobId" element={<ApplyJobComponent />} />
       </Routes>
     </>
   );
