@@ -10,6 +10,8 @@ import ContactComponent from './components/ContactComponent';
 import SigninComponent from './components/SigninComponent';
 import SignupComponent from './components/SignupComponent';
 import WelcomeComponent from './components/WelcomeComponent';
+import ListJobComponent from './components/ListJobComponent';
+import JobComponent from './components/JobComponent';
 
 const App = () => {
   const location = useLocation();
@@ -26,7 +28,9 @@ const App = () => {
         <Route path='/search' element={<SearchComponent />} />
         <Route path='/contact' element={<ContactComponent />} />
         <Route path='/users' element={<ListUserComponent />} />
+        <Route path='/jobs' element={<ListJobComponent />} />
         <Route path='/add-user' element={<UserComponent />} />
+        <Route path='/add-job' element={<JobComponent />} />
         <Route path='/signin' element={<SigninComponent />} />
         <Route path='/signup' element={<SignupComponent />} />
       </Routes>

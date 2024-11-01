@@ -22,7 +22,7 @@ const UserComponent = () => {
         try {
             const response = await createUser(user);
             console.log(response.data);
-            navigator('/home');
+            navigator('/users');
         } catch (err) {
             console.error(err);
             setError('Failed to create user. Please try again.');
