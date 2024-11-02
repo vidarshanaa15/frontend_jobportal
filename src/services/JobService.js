@@ -10,3 +10,5 @@ export const createJob = (jobData) => axios.post(REST_API_JOB_URL, jobData)
 export const getJobById = (jobId) => axios.get(`${REST_API_JOB_URL}/${jobId}`);
 
 export const getApplicationByJobId = (jobId) => axios.get(`${REST_API_APPL_URL}/${jobId}`);
+
+export const getUserById = (user_id) => axios.get(`http://localhost:8080/api/user/id/${user_id}`); 
