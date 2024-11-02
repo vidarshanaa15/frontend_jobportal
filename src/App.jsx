@@ -18,6 +18,8 @@ import ViewJobComponent from './components/ViewJobComponent';
 import ApplyJobComponent from './components/ApplyJobComponent';
 import ListApplicationComponent from './components/ListApplicationComponent';
 import ApplicationComponent from './components/ApplicationComponent';
+import RecruitSearchComponent from './components/RecruitSearchComponent';
+import ViewScoreComponent from './components/ViewScoreComponent';
 
 const App = () => {
   const location = useLocation();
@@ -31,6 +33,7 @@ const App = () => {
         <Route path='/' element={<WelcomeComponent />} />
         <Route path='/admin-home' element={<AdminHomeComponent />} />
         <Route path='/recruit-home' element={<RecruitHomeComponent />} />
+        <Route path='/recruit-search' element={<RecruitSearchComponent />} />
         <Route path='/home' element={<HomeComponent />} />
         <Route path='/about' element={<AboutComponent />} />
         <Route path='/search' element={<SearchComponent />} />
@@ -45,6 +48,7 @@ const App = () => {
         <Route path='/signup' element={<SignupComponent />} />
         <Route path="/view-job/:jobId" element={<ViewJobComponent />} />
         <Route path="/apply-job/:jobId" element={<ApplyJobComponent />} />
+        <Route path="/view-score/:jobId" element={<ViewScoreComponent />} />
       </Routes>
     </>
   );

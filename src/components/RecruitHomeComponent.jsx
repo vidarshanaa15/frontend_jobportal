@@ -47,6 +47,12 @@ const RecruitHomeComponent = () => {
                     </button>
                     <p style={descriptionStyle}>Applications</p>
                 </div>
+                <div style={buttonContainerStyle}>
+                    <button className="btn btn-primary" style={buttonStyle} onClick={() => navigator('/recruit-search')}>
+                        <img src="https://i.ibb.co/1YckNpp/score1.png" alt="View Scores" style={imageStyle} />
+                    </button>
+                    <p style={descriptionStyle}>View Scores</p>
+                </div>
             </div>
         </div>
     )

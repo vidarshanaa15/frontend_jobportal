@@ -39,6 +39,7 @@ const ListApplicationComponent = () => {
                         <th>Qualification</th>
                         <th>Experience</th>
                         <th>Skills</th>
+                        <th>Score</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,6 +55,7 @@ const ListApplicationComponent = () => {
                                 <td>{application.qualification}</td>
                                 <td>{application.experience}</td>
                                 <td>{application.skills}</td>
+                                <td>{application.score}</td>
                             </tr>
                         ))
                     }
