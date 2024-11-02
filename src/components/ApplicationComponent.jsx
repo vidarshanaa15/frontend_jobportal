@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ApplicationComponent = () => {
     const [user_id, setUserId] = useState('');
-    const [job_id, setJobId] = useState('');
+    const [jobId, setJobId] = useState('');
     const [gender, setGender] = useState('');
     const [dob, setDob] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -17,7 +17,7 @@ const ApplicationComponent = () => {
 
     const saveApplication = async (e) => {
         e.preventDefault();
-        const applicationData = { user_id, job_id, gender, dob, phoneNumber, qualification, experience, skills };
+        const applicationData = { user_id, jobId, gender, dob, phoneNumber, qualification, experience, skills };
 
         try {
             const response = await createApplication(applicationData);
@@ -52,8 +52,8 @@ const ApplicationComponent = () => {
                             <input
                                 type='text'
                                 placeholder='Enter Job ID'
-                                name='job_id'
-                                value={job_id}
+                                name='jobId'
+                                value={jobId}
                                 className='form-control'
                                 onChange={(e) => setJobId(e.target.value)}
                             />

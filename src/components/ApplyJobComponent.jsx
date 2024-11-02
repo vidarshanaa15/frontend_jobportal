@@ -32,7 +32,7 @@ const ApplyJobComponent = () => {
 
     const saveApplication = async (e) => {
         e.preventDefault();
-        const applicationData = { user_id, job_id: jobId, gender, dob, phoneNumber, qualification, experience, skills };
+        const applicationData = { user_id, jobId: jobId, gender, dob, phoneNumber, qualification, experience, skills };
 
         try {
             const response = await createApplication(applicationData);

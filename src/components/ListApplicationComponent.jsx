@@ -48,7 +48,7 @@ const ListApplicationComponent = () => {
                             <tr key={application.id}>
                                 <td>{application.id}</td>
                                 <td>{application.user_id}</td>
-                                <td>{application.job_id}</td>
+                                <td>{application.jobId}</td>
                                 <td>{application.gender}</td>
                                 <td>{application.dob}</td>
                                 <td>{application.phoneNumber}</td>
