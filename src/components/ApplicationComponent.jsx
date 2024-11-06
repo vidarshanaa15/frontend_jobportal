@@ -33,7 +33,7 @@ const ApplicationComponent = () => {
         <div className='container'>
             <div className='card col-md-8 offset-md-2 my-5'>
                 <div className='card-body'>
-                    <h3 className="card-title text-center">Apply for Job</h3>
+                    <h3 className="card-title text-center">Add application</h3>
                     <form>
                         <div className='form-group mb-3'>
                             <label className='form-label'>User ID</label>

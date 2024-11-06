@@ -2,6 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'; // for showing a particular navbar tab as active
 
 const HeaderComponent = () => {
+    const handleSignOut = () => {
+        alert("Logged out successfully");
+    };
+
     return (
         <div>
             <header>
@@ -25,9 +29,7 @@ const HeaderComponent = () => {
                             </li>
                         </ul>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link" href="/signout">Sign Out</a>
-                            </li>
+                            <a className="nav-link" href="/" onClick={handleSignOut}>Sign Out</a>
                         </ul>
                     </div>
                 </nav>

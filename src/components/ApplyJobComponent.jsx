@@ -38,7 +38,7 @@ const ApplyJobComponent = () => {
             const response = await createApplication(applicationData);
             console.log(response.data);
             alert(`Application submitted for the position of "${job.job}"`);
-            navigate('/applications');
+            navigate('/search');
         } catch (err) {
             console.error(err);
             setError('Failed to submit application. Please try again.');
@@ -50,7 +50,6 @@ const ApplyJobComponent = () => {
     return (
         <div className="container mt-4">
             <h2>Apply for the position of "{job.job}"</h2>
-            {/* Add application form fields here */}
             <div className='card col-md-8 offset-md-2 my-5'>
                 <div className='card-body'>
                     <h3 className="card-title text-center">Apply for Job</h3>

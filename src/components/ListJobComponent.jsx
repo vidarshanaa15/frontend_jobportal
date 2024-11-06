@@ -22,7 +22,7 @@ const ListJobComponent = () => {
     return (
         <div className='container'>
             <h3 className='text-center my-3'>List of Jobs</h3>
-            <button className='btn btn-primary mb-2' onClick={addNewJob}>Add Job</button>
+            <button className='btn btn-primary mb-2' onClick={addNewJob}>Post Job</button>
             <table className='table table-bordered table-hover'>
                 <thead className="table-dark">
                     <tr>

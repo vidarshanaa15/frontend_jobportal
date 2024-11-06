@@ -127,17 +127,17 @@ const SignupComponent = () => {
 
                         <div className='form-group mb-3'>
                             <label className='form-label'>User Type</label>
-                            <input
-                                type='text'
-                                placeholder='Enter user type (admin/recruiter/jobseeker)'
+                            <select
                                 name='user_type'
                                 value={user_type}
                                 className='form-control'
                                 onChange={(e) => setUser_type(e.target.value)}
                             >
-                            </input>
+                                <option value='' disabled>Select user type</option>
+                                <option value='jobseeker'>Jobseeker</option>
+                                <option value='recruiter'>Recruiter</option>
+                            </select>
                         </div>
-
                         <button className='btn btn-success' onClick={saveUser}>Submit</button>
                     </form>
                 </div>
